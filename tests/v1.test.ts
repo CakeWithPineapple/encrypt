@@ -19,10 +19,10 @@ describe('Encryption Module Tests', () => {
     expect(decryptedAES).toBe(textToEncrypt);
   });
 
-  // Fernet Base64 Encryption and Decryption
-  test('Fernet Base64 Encryption and Decryption', () => {
-    const encryptedFernet = v1.encryptBase64(textToEncrypt, keyFernet);
-    const decryptedFernet = v1.decryptBase64(encryptedFernet, keyFernet);
+  // Base64 Encryption and Decryption
+  test('Base64 Encryption and Decryption', () => {
+    const encryptedFernet = v1.encryptBase64(textToEncrypt);
+    const decryptedFernet = v1.decryptBase64(encryptedFernet);
     expect(decryptedFernet).toBe(textToEncrypt);
   });
 

@@ -4,8 +4,8 @@ import * as fernet from 'fernet';
 export interface v1Interface {
     encryptAES(text: string, key: Buffer): Buffer;
     decryptAES(encodedData: Buffer, key: Buffer): string;
-    encryptBase64(text: string, key: string): string;
-    decryptBase64(encryptedText: string, key: string): string;
+    encryptBase64(text: string): string;
+    decryptBase64(encryptedText: string): string;
     encryptXOR(text: string, key: number): string;
     decryptXOR(encodedText: string, key: number): string;
 }
@@ -36,20 +36,12 @@ const v1: v1Interface = {
             return '';
         }
     },
-    encryptBase64: (text, key) => {
-        const cipher = new fernet.Secret(key);
-        const token = new fernet.Token({ secret: cipher });
-        
-        const encryptedText = token.encode(text);
-        return encryptedText;
+    encryptBase64: (text) => {
+        return btoa(text);
     },
     
-    decryptBase64: (encryptedText, key) => {
-        const cipher = new fernet.Secret(key);
-        const token = new fernet.Token({ secret: cipher, token: encryptedText, ttl: 0 });
-        
-        const decryptedText = token.decode();
-        return decryptedText.toString();
+    decryptBase64: (encryptedText) => {
+        return atob(encryptedText);
     },
     
     encryptXOR: (text, key) => {
