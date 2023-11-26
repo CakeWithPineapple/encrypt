@@ -11,7 +11,7 @@
     "tsup": "^8.0.1"
   },
   "name": "hikelibs-encrypt",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -22,7 +22,18 @@
     "build": "tsup",
     "test": "jest"
   },
-  "keywords": [],
+  "keywords": [
+    "encryption",
+    "typescript",
+    "node.js",
+    "node",
+    "nodejs",
+    "javascript",
+    "js",
+    "ts",
+    "es",
+    "ecmascript"
+  ],
   "author": "",
   "license": "ISC",
   "description": ""
