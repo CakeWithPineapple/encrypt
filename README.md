@@ -54,3 +54,6 @@ Encrypts the input text using XOR with the provided key.
 
 __`decryptXOR(encodedText: string, key: number): string`__
 Decrypts the XOR-encoded text using the provided key.
+
+## GitHub Repository
+https://www.github.com/CakeWithPineapple/encrypt
