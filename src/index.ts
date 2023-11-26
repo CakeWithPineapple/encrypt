@@ -1,5 +1,4 @@
 import * as crypto from 'crypto';
-import * as fernet from 'fernet';
 
 export interface v1Interface {
     encryptAES(text: string, key: Buffer): Buffer;

@@ -1,7 +1,5 @@
 {
   "dependencies": {
-    "base64url": "^3.0.1",
-    "fernet": "^0.4.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.3.2"
   },
@@ -13,7 +11,7 @@
     "tsup": "^8.0.1"
   },
   "name": "hikelibs-encrypt",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
