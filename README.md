@@ -1,16 +1,16 @@
-# @hikelibs/encrypt
+# hikelibs-encrypt
 
 `Hikelibs Encrypt` provides various encryption and decryption functions using different algorithms in Node.js with TypScript.
 
 ## Installation
 
 ```bash
-npm install @hikelibs/encrypt
+npm install hikelibs-encrypt
 ```
 
 ## Usage
 ```typescript
-import v1, { v1Interface } from "@hikelibs/encrypt";
+import v1, { v1Interface } from "hikelibs-encrypt";
 
 const keyAES = Buffer.from(v1.encryptXOR('randomKey', 42), 'utf-8');
 const keyBase64 = encryptionModule.encryptXOR('randomKey', 42).toString();
