@@ -1,4 +1,4 @@
-/node_modules
+# INITIAL COMMIT
 
 # Ignore test-related files
 /coverage.data
@@ -6,3 +6,6 @@
 
 # Build files
 /dist
+
+# Packages & Dependencies
+/node_modules
