@@ -13,6 +13,21 @@ v2.generateAESKey = (keySize: number): Buffer => {
   return crypto.randomBytes(keySize / 8);
 }
 
+v2.generateXORKey = (keySize: number): number => {
+  const keyLength: number = keySize;  // Choose the desired key length in bytes
+  const hexChars: string = '0123456789ABCDEF';
+
+  const keyArray: Buffer = crypto.randomBytes(keyLength);
+
+  let hexString: string = '';
+  for (const byte of keyArray) {
+      hexString += hexChars[byte >> 4] + hexChars[byte & 0xF];
+  }
+
+  const numericKey: number | undefined = parseInt(hexString, 16);
+  return numericKey;
+}
+
 type Method = 'aes' | 'base64' | 'xor';
   
 export function v2(type: 'encrypt' | 'decrypt', method: Method, options: EncryptionOptions): Buffer | string {
