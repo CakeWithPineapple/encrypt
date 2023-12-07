@@ -13,7 +13,9 @@ npm install hikelibs-encrypt
 import { v2 } from "hikelibs-encrypt";
 
 const textToEncrypt = 'Hello, World!';
+// AES key generation
 const keyAES = v2.generateAESKey(256);
+// XOR key generation
 const keyXOR = v2.generateXORKey(16);
 
 const encryptedAES = v2('encrypt', 'aes', { string: textToEncrypt, key: keyAES });
