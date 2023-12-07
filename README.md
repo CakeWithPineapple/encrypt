@@ -14,7 +14,7 @@ import { v2 } from "hikelibs-encrypt";
 
 const textToEncrypt = 'Hello, World!';
 const keyAES = v2.generateAESKey(256);
-const keyXOR = 42;
+const keyXOR = v2.generateXORKey(16);
 
 const encryptedAES = v2('encrypt', 'aes', { string: textToEncrypt, key: keyAES });
 const decryptedAES = v2('decrypt', 'aes', { string: encryptedAES, key: keyAES });

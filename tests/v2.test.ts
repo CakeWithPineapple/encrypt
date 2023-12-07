@@ -4,7 +4,7 @@ describe('Encryption Module Tests', () => {
   // Generate a random key for AES encryption
   const keyAES = v2.generateAESKey(256);
 
-  const keyXOR = 42;
+  const keyXOR = v2.generateXORKey(16);
 
   const textToEncrypt = 'Hello, World!';
 
